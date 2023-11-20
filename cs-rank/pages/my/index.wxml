@@ -1,0 +1,46 @@
+<!--pages/my/index.wxml-->
+<block wx:if="{{!has_info}}">
+    <view class="login-container">
+        <button type="primary" bind:tap="login">微信登录</button>
+    </view>
+</block>
+
+<block wx:else>
+    <!-- 头像昵称区域 -->
+    <view class="top-box">
+        <image src="{{avatarUrl}}" class="avatar"></image>
+        <view class="nickname">{{nickname}}</view>
+    </view>
+
+    <view class="panel">
+        <view class="panel-list-item" bindtap="logout">
+            <image src="/images/my/logout.png"></image>
+            <text>退出登录</text>
+            <image src="/images/my/arrow-right.png"></image>
+        </view>
+
+        <view class="panel-list-item" bindtap="view_history_vote">
+            <image src="/images/my/vote_history.png"></image>
+            <text>您发起的投票</text>
+            <image wx:if="{{ status == 'show' }}" src="/images/my/arrow-right.png"></image>
+            <image wx:else src="/images/my/arrow-down.png"></image>
+        </view>
+
+        
+
+    </view>
+    
+    <view class="history-vote" wx:if="{{group_list.length != 0}}">
+        <view class="gap">
+            <view class="gap-content">投票记录</view>
+            <view class="gap-content">创建时间</view>
+        </view>
+        <view wx:for="{{ group_list }}" wx:key="*this">
+            <view class="vote-info" bindtap="view_share" data-index="{{index}}">
+                <view class="vote-title">{{ group_list[index].title }}</view>
+                <view class="vote-create-time">{{ group_list[index].create_time }}</view>
+            </view>
+            <view class="br"></view>
+        </view>
+    </view>
+</block>

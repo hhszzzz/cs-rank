@@ -1,0 +1,27 @@
+<!--pages/initUserInfo/index.wxml-->
+<view>
+    <view>
+        <view class="gap">
+            <view class="gap-content">个人信息</view>
+        </view>
+        <view class="content">
+            <view class="row" style="border-bottom: #acacac solid 1rpx; padding-bottom: 20rpx;">
+                <view class="text1">头像：</view>
+                <button class="avatar-wrapper" style="width: auto;" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+                    <image class="avatar" src="{{avatarUrl}}"></image>
+                </button>
+            </view>
+            <view class="row" style="padding-top: 20rpx;">
+                <view class="text1">昵称：</view>
+                <input style="padding-right: 20rpx;" type="nickname" class="name-input weui-input nickname" placeholder="请输入昵称" bindinput="nameInput" />
+            </view>
+        </view>
+        <view class="bottom-wrapper">
+            <view class="bottom">
+                <view class="info__footer">
+                    <button type="primary" bindtap="save">保存</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

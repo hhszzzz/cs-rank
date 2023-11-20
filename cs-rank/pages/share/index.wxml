@@ -1,0 +1,75 @@
+<!--pages/share/index.wxml-->
+
+<view wx:if="{{ is_login }}">
+    <view class="gap">
+        <view class="gap-content"></view>
+    </view>
+
+    <view class="card">
+        <view class="card-body" style="height: 300rpx;">
+            <view>
+                <view class="title">{{ title }}</view>
+                <view class="share-btn">
+                    <button bindtap="share" open-type="share">
+                        <image src="/images/share/share.png"></image>
+                    </button>
+                </view>
+
+            </view>
+
+            <view class="info-candidate">
+                人选：{{ candidate }}
+            </view>
+            <view class="info-reason">
+                罪行：{{ reason }}
+            </view>
+            <view class="info-score">
+                加{{ score }}分
+            </view>
+        </view>
+    </view>
+
+    <view class="choice">
+        <radio-group name="radio" bindchange="radioChange">
+            <view class="card" style="margin-top: 20rpx;">
+                <view class="card-body" style="height: 90rpx; line-height: 90rpx;">
+                    <radio value="agree" />
+                    同意
+                </view>
+            </view>
+            <view class="card" style="margin-top: 20rpx;">
+                <view class="card-body" style="height: 90rpx; line-height: 90rpx;">
+                    <radio value="oppose" />
+                    反对
+                </view>
+            </view>
+        </radio-group>
+    </view>
+
+    <view class="confirm-btn">
+        <button type="primary" disabled="true" wx:if="{{!is_choose}}">请选择投票项</button>
+        <button type="primary" wx:else bindtap="confirm">{{vote_btn_info}}</button>
+    </view>
+
+    <view>
+        <view class="card" style="margin-top: 30rpx;">
+            <view class="card-body rule" style="height: 300rpx;">
+                <view>投票规则</view>
+                <view>1. 本次投票为单选。</view>
+                <view>2. 本次投票会记录（昵称、头像）信息。</view>
+                <view>3. 本次投票为群投票，只允许群成员投票。</view>
+                <view>4. 投票后无法撤回。</view>
+                <view>5. 参与投票后可查看票数。</view>
+                <view>6. 投票时间：{{start_time}} - {{end_time}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view>
+        <view class="info-create_time">— {{ create_time }} 发起 —</view>
+        <view class="top-box">
+            <image src="{{promoter_avatar}}" class="avatar"></image>
+            <view class="nickname">{{promoter}}</view>
+        </view>
+    </view>
+</view>

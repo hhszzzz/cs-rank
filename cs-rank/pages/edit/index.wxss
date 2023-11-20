@@ -1,0 +1,59 @@
+/* pages/edit/index.wxss */
+.container {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.page-body{
+    width: 80%;
+}
+
+.view-contain-ti {
+    display: flex;
+    height: 40px;
+    margin: 20px;
+    border: 4rpx solid #faca82;
+    border-radius: 10rpx;
+}
+
+.text-ti {
+    position: absolute;
+    font-size: 12px;
+    background: white;
+    margin: -10px 0 0 10px;
+    padding: 0 5px;
+    color: rgb(144, 147, 167);
+}
+
+.input1 {
+    margin: auto 10px;
+}
+
+.page-section-gap {
+    align-items: center;
+    justify-content: center;
+}
+
+.addimg {
+    width: 30px;
+    height: 30px;
+}
+
+.add {
+    margin-top: 5px;
+    float: right;
+}
+
+page {
+    height: 100%;
+}
+
+.scroll {
+    height: auto;
+}
+
+.item {
+    background: #ddd;
+    margin: 10px 0;
+    height: 40rpx;
+}

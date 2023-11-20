@@ -1,0 +1,89 @@
+/* pages/initUserInfo/index.wxss */
+.gap {
+    height: 70rpx;
+}
+
+.gap-content {
+    color: #868686;
+    font-size: 14px;
+    line-height: 70rpx;
+    margin-left: 30rpx;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    background-color: white;
+}
+
+.info__footer {
+    display: flex;
+    justify-content: center;
+    height: 80rpx;
+    padding-top: 20rpx;
+}
+
+.bottom-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom {
+    /* overflow: hidden; */
+    display: block;
+    width: 100;
+    height: 150rpx;
+    text-align: center;
+    color: #fff;
+    margin: 50rpx 50rpx;
+    /* box-shadow: 0 14rpx 28rpx rgba(51,122,255,0.3); */
+}
+
+.info__footer .footer-btn {
+    width: 398rpx;
+}
+
+.footer-btn {
+    background: linear-gradient(90deg, #34AAFF 0%, #0A73EE 100%) !important;
+    border: none !important;
+}
+
+.footer-btn::after {
+    border: none !important;
+}
+
+.content .row {
+    display: flex;
+    align-items: center;
+    height: 110rpx;
+    padding-left: 20rpx;
+}
+
+.content .text1 {
+    flex: 2;
+}
+
+.content .name-input,
+.content .avatar-wrapper {
+    flex: 6;
+    text-align: right;
+}
+
+.content .avatar-wrapper::after {
+    border: none !important;
+}
+
+.content .avatar-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content .avatar-wrapper .avatar {
+    display: block;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}

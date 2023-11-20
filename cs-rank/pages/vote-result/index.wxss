@@ -1,0 +1,117 @@
+/* pages/vote-result/index.wxss */
+/* pages/share/index.wxss */
+.gap {
+    height: 70rpx;
+}
+
+.gap-content {
+    color: #868686;
+    font-size: 14px;
+    line-height: 70rpx;
+    margin-left: 30rpx;
+}
+
+.card {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    background-color: white;
+}
+
+.card-body {
+    margin: 0 30rpx;
+    line-height: 80rpx;
+}
+
+.card-body>view>view {
+    display: inline-block;
+}
+
+.title {
+    font-size: x-large;
+    margin-top: 20rpx;
+}
+
+.info-reason {
+    display: inline-block;
+}
+
+.info-score {
+    float: right;
+    font-size: 20px;
+    color: #ca3a3a;
+}
+
+.share-btn {
+    float: right;
+}
+
+.share-btn>button {
+    margin-top: 30rpx;
+    width: 50rpx;
+    height: 50rpx;
+    padding-right: 4rpx;
+    padding-top: 4rpx;
+    /* padding-bottom: 100rpx; */
+}
+
+.share-btn>button>image {
+    width: 50rpx;
+    height: 50rpx;
+    float: right;
+    /* line-height: 90rpx; */
+    justify-content: center;
+}
+
+radio {
+    transform: scale(0.7)
+}
+
+.confirm-btn {
+    margin-top: 40rpx;
+}
+
+.rule>view {
+    height: 40rpx;
+    margin: 0;
+    font-size: 13px;
+    color: #979797;
+}
+
+.top-box {
+    height: 280rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.top-box .avatar {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* 用户昵称样式 */
+.top-box .nickname {
+    color: black;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.info-create_time {
+    color: #808080;
+    margin-top: 60rpx;
+    text-align: center;
+}
+
+.result {
+    text-align: center;
+}
+
+.result > image {
+    width: 200px;
+    height: 200px;
+}

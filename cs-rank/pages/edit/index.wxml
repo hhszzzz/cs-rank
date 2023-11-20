@@ -1,0 +1,33 @@
+<!--pages/edit/index.wxml-->
+<view class="container">
+    <view class="page-body">
+        <form>
+            <view class="view-contain-ti">
+                <text class="text-ti">组别名称</text>
+                <input class="input1" model:value="{{ group_name }}" bindinput="groupInput"></input>
+            </view>
+
+            <block class="box" wx:for="{{ renlists }}" wx:key="*this">
+                <view class="view-contain-ti">
+                    <text class="text-ti">姓名：</text>
+                    <input class="input1" data-id="{{index}}" bindinput="adduser" value="{{renlists[index].user}}" placeholder="请填写姓名" />
+                </view>
+                <view wx:if="{{index==renlists.length-2}}">
+                    <view class="add" bindtap="addren">
+                        <image src="/images/addImg.png" alt="t" class="addimg" />
+                    </view>
+                </view>
+                <view wx:if="{{renlists.length == 1}}">
+                    <view bindtap="addren">
+                        <button type="default">继续添加</button>
+                    </view>
+                </view>
+            </block>
+
+            <view class="btn-area">
+                <button style="margin: 30rpx auto" type="primary" formType="submit" bindtap="addGroup">创建</button>
+            </view>
+
+        </form>
+    </view>
+</view>

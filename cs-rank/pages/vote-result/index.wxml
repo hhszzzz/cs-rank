@@ -1,0 +1,40 @@
+<!--pages/vote-result/index.wxml-->
+<view class="gap">
+    <view class="gap-content"></view>
+</view>
+
+<view class="card">
+    <view class="card-body" style="height: 300rpx;">
+        <view>
+            <view class="title">{{ title }}</view>
+            <!-- <view class="share-btn">
+                <button bindtap="share" open-type="share">
+                    <image src="/images/share/share.png"></image>
+                </button>
+            </view> -->
+        </view>
+
+        <view class="info-candidate">
+            人选：{{ candidate }}
+        </view>
+        <view class="info-reason">
+            罪行：{{ reason }}
+        </view>
+        <view class="info-score">
+            加{{ score }}分
+        </view>
+    </view>
+</view>
+
+<view class="result">
+    <image wx:if="{{ is_agree }}" src="/images/result/access.png"></image>
+    <image wx:else src="/images/result/reject.png"></image>
+</view>
+
+<view>
+    <view class="info-create_time">—————————</view>
+    <view class="top-box">
+        <image src="{{promoter_avatar}}" class="avatar"></image>
+        <view class="nickname">{{promoter}}</view>
+    </view>
+</view>

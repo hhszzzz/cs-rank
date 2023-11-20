@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="search">
+    <view class="search_in">
+        <!-- 使用代码请更改图片路径 -->
+        <image src="/images/search.png"></image>
+        <input type="text" placeholder="请输入搜索组别（现在用不了）" bindinput="searchInput" />
+        <button class="search_btn" bindtap="search">搜索</button>
+    </view>
+</view>
+
+<view class="gap">
+    <view class="gap-content">全服组别</view>
+</view>
+
+<!-- 展示所有人创建的组别 -->
+<view class="history-group" wx:for="{{ group_list }}" wx:key="*this">
+    <view class="info" bindtap="click_group" data-index="{{index}}">
+        <view class="group-info">{{ group_list[index].group_name }}</view>
+        <view class="user-info">
+            <view style="color: #898989; font-size: 14px; margin-right: 10px; line-height: 35px;">by</view>
+            <image class="history-user-avatar" src="{{ group_list[index].create_user_avatarUrl }}"></image>
+            <view class="history-username">{{ group_list[index].create_username }}</view>
+        </view>
+    </view>
+</view>
+
+<view>
+    <button class="add_group" bindtap="addGroup" type="primary">添加组别</button>
+</view>

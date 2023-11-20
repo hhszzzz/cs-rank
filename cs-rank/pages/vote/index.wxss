@@ -1,0 +1,34 @@
+.lineItem {
+    margin-top: 3rpx;
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    text-align: center;
+    /* border-bottom: 1rpx solid lightgrey; */
+}
+
+.kindInfo {
+    height: 40rpx;
+    margin-left: 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.KindItem {
+    height: 70rpx;
+}
+
+.gap {
+    height: 70rpx;
+}
+
+.gap-content {
+    color: #868686;
+    font-size: 14px;
+    line-height: 70rpx;
+    margin-left: 30rpx;
+}

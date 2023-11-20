@@ -1,0 +1,109 @@
+/* pages/rank/index.wxss */
+.rank-page {
+    text-align: center;
+}
+
+.section {
+    margin-top: 50rpx;
+    margin-bottom: 50rpx;
+    display: flex;
+}
+
+.vote-btn {
+    margin-right: auto;
+}
+
+.vote-btn>button {
+    height: 75rpx;
+    line-height: 50rpx;
+}
+
+.title {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.none_rank {
+    margin-top: 80%;
+    font-size: large;
+}
+
+.picker {
+    display: inline-block;
+    width: 320rpx;
+    height: 70rpx;
+    border: rgb(180, 180, 180) solid 2px;
+    border-radius: 10rpx;
+    line-height: 70rpx;
+    margin: auto;
+}
+
+.choice {
+    font-size: larger;
+    color: #07C160;
+}
+
+.user-section {
+    width: 100vw;
+    display: inline-flex;
+    padding: 20rpx;
+}
+
+.left-section{
+    display: inline-flex;
+    align-items: center;
+    margin-left: 1%;
+}
+
+.left-section>text{
+    width: 40px;
+    font-size: x-large;
+}
+
+.left-section>image{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 15rpx;
+    margin-left: 30rpx;
+}
+
+.center-section {
+    display: inline-block;
+    margin-left: 32rpx;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.score {
+    display: inline-block;
+    margin: auto;
+    margin-right: 50rpx;
+    font-size: 28px;
+    color: #07C160;
+    
+}
+
+.right-section {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 50rpx;
+}
+
+.right-section>view {
+    display: inline-block;
+}
+
+.like_num {
+    color: rgb(180, 180, 180);
+}
+
+.like>image {
+    width: 42rpx;
+    height: 42rpx;
+    padding-top: 8rpx;
+}
+
+.br {
+    border: rgb(180, 180, 180) solid 1px;
+}

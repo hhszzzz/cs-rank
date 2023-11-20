@@ -1,0 +1,87 @@
+<view class="gap">
+    <view class="gap-content">基本信息</view>
+</view>
+<view class="lineItem">
+    <view class="kindInfo">
+        <view class="KindItem">
+            投票标题
+        </view>
+    </view>
+
+    <input class="inputItem" placeholder="请输入标题内容" bindinput="titleInput"></input>
+</view>
+
+<view class="lineItem">
+    <view class="kindInfo">
+        <view class="KindItem">
+            加分项
+        </view>
+    </view>
+
+    <input class="inputItem" placeholder="请输入加分原因" bindinput="reasonInput"></input>
+</view>
+
+<view class="lineItem">
+    <view class="kindInfo">
+        <view class="KindItem">
+            人选
+        </view>
+    </view>
+
+<!-- picker -->
+    <picker class="picker" style="margin-right: 110rpx" bindchange="candidateChange" value="{{index}}" range="{{candidate_list}}">
+        <view>
+            <text class="choice">{{candidate_list[index]}}</text>
+        </view>
+    </picker>
+</view>
+
+<view class="lineItem">
+    <view class="kindInfo">
+        <view class="KindItem">
+            加分分数
+        </view>
+    </view>
+
+    <input class="inputItem" type="number" bindinput="scoreInput" placeholder="请输入要加的分数"></input>
+</view>
+
+<view class="gap">
+    <view class="gap-content">时间设置</view>
+</view>
+
+<view class="lineItem">
+    <view class="kindInfo">
+        <view class="KindItem">
+            开始时间
+        </view>
+    </view>
+
+    <view class="inputItem" style="margin-right: 50rpx;">
+        <picker mode="multiSelector" value="{{dateTime1}}" bindcolumnchange="changeStartTimeColumn" range="{{dateTimeArray1}}">
+            <text class="picker">{{startTime}}</text>
+            <text class="iconfont icon-arrow-right-copy-copy" id="phoneIcon"></text>
+        </picker>
+    </view>
+</view>
+
+<view class="lineItem">
+    <view class="kindInfo">
+        <view class="KindItem">
+            截止时间
+        </view>
+    </view>
+
+    <view class="inputItem" style="margin-right: 50rpx;">
+        <picker mode="multiSelector" value="{{dateTime1}}" bindcolumnchange="changeEndTimeColumn" range="{{dateTimeArray1}}">
+            <text class="picker">{{endTime}}</text>
+            <text class="iconfont icon-arrow-right-copy-copy" id="phoneIcon"></text>
+        </picker>
+    </view>
+</view>
+
+<view class="gap">
+    <view class="gap-content" style="text-align: center;">注意：仅允许群成员投票</view>
+</view>
+
+<button type="primary" bindtap="vote">发起投票</button>

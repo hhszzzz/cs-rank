@@ -1,0 +1,93 @@
+/* pages/my/index.wxss */
+.login-container {
+    margin-top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 用户信息样式 */
+.top-box {
+    height: 400rpx;
+    /* background-color: #9aabca; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* 用户头像样式 */
+.top-box .avatar {
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    border: 2px solid white;
+    box-shadow: 0 1px 5px black;
+}
+
+/* 用户昵称样式 */
+.top-box .nickname {
+    color: #898989;
+    /* font-weight: bold; */
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* 面板样式设置 */
+.panel {
+    background-color: white;
+    border-radius: 3px;
+}
+
+.panel-list-item {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+.panel-list-item text {
+    font-size: large;
+}
+
+/* 箭头样式 */
+.panel-list-item image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.gap {
+    height: 70rpx;
+    margin: 0 auto;
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gap-content {
+    color: #868686;
+    font-size: 14px;
+    line-height: 70rpx;
+}
+
+.history-vote {
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.vote-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx;
+}
+
+.br {
+    border-top: #868686 solid 1px;
+}

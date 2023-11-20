@@ -1,0 +1,48 @@
+<!--pages/rank/index.wxml-->
+<view class="rank-page">
+    <view class="title">排行榜</view>
+    <view wx:if="{{group_list.length > 0}}">
+        <view class="section">
+            <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{group_list}}">
+                <view>
+                    当前组别：
+                    <text class="choice">{{group_list[index]}}</text>
+                </view>
+            </picker>
+
+            <view class="vote-btn">
+                <button type="primary" bindtap="vote">
+                    <view>发起投票</view>
+                </button>
+            </view>
+        </view>
+        
+        <view class="rank-list" wx:for="{{user_list}}" wx:for-item="user" wx:key="*this">
+            <view class="br" />
+            <!-- 循环 -->
+            <view class="user-section">
+                <view class="left-section">
+                    <text>{{index + 1}}</text>
+                    <image src="/images/avatar.png"></image>
+                </view>
+
+                <view class="center-section">
+                    {{user.username}}
+                </view>
+
+                <view class="score">{{user.score}}</view>
+
+                <view class="right-section">
+                    <view class="like">
+                        <view class="like_num">0</view>
+                        <image bindtap="like" src="{{like_icon}}" />
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="none_rank" wx:else>暂无组内排行信息</view>
+    <!-- 循环 -->
+
+</view>
